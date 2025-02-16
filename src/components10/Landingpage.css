@@ -1,0 +1,263 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(90deg, #009688, #4caf50);
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.navmenu ul li {
+  display: inline-block;
+}
+
+.navmenu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navmenu ul li a:hover {
+  color: #ffeb3b;
+}
+
+.btn-getstarted {
+  padding: 10px 25px;
+  background-color: #ffeb3b;
+  color: #333;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-getstarted:hover {
+  background-color: #fbc02d;
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1b5e20;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-text {
+  font-size: 1.2rem;
+  color: #424242;
+  margin: 15px 0;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-img img {
+  max-width: 80%;
+  margin-top: 20px;
+  border-radius: 10px;
+  animation: floating 2s infinite ease-in-out;
+}
+
+/* Floating Animation */
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* About Section */
+.about {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 60px 20px;
+  margin: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-out;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: #00796b;
+  margin-bottom: 20px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #616161;
+  animation: fadeInUp 2s ease-out;
+}
+
+/* Services Section */
+.services {
+  background-color: rgba(241, 248, 233, 0.8);
+  padding: 60px 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  color: #558b2f;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 60px 20px;
+  margin: 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.testimonial-item {
+  background-color: #f1f8e9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: slideIn 0.1s ease-in-out;
+}
+
+.testimonial-img {
+  border-radius: 50%;
+  max-width: 80px;
+  margin-bottom: 15px;
+}
+
+blockquote {
+  font-style: italic;
+  color: #4e342e;
+}
+
+/* Contact Section */
+.contact {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 60px 20px;
+  margin: 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  color: #00796b;
+  margin-bottom: 30px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  color: #616161;
+  margin-bottom: 20px;
+  animation: fadeInUp 2s ease-out;
+}
+
+.contact .contact-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.contact-info h4:hover, .contact-info p:hover {
+  color: #388e3c;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+/* Background Video */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+/* Footer Section */
+.footer {
+  background: linear-gradient(90deg, #009688, #4caf50); /* Same as header */
+  color: #ffffff;
+  padding: 30px 0; /* Significantly reduced padding to decrease height */
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.8rem; /* Even smaller font size */
+  margin: 0;
+}
+/* Section Fade-in Effect */
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: sectionFadeIn 1s forwards ease-in-out;
+}
+
+@keyframes sectionFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

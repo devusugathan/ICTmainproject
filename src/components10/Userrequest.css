@@ -1,0 +1,194 @@
+/* Theme Variables */
+:root {
+  --primary-blue: #2c3e50;
+  --secondary-blue: #34495e;
+  --accent-color: #3498db;
+  --background-light: #ecf0f1;
+  --text-color: #2c3e50;
+}
+
+/* General Styles */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: var(--text-color);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  line-height: 1.6;
+}
+
+/* Main Container */
+.container3 {
+  flex: 1; /* Pushes the footer down */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+.tablediv {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 3px solid white;
+  table-layout: fixed;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: middle;
+  vertical-align: middle;
+  border: 2px solid white;
+  transition: background-color 0.3s ease;
+  word-wrap: break-word;
+}
+
+th {
+  background-color: var(--primary-blue);
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+tr {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Form Styling */
+#form {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Form Input Styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d8e0;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Button Styles */
+button {
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  margin-right: 10px;
+}
+
+button.new-request-btn {
+  width: 150px;
+}
+
+button:hover {
+  background-color: var(--secondary-blue);
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Error Message */
+div[style*="color: red"] {
+  color: #e74c3c !important;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Footer Fixed at the Bottom */
+.footer {
+  background-image: linear-gradient(to right, #111827, #1f2937);
+  color: white;
+  padding: 1rem;
+  max-height: 70px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  margin-top: 200px; /* Moves it slightly down */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container2 {
+    padding: 1rem;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: 0.5rem;
+  }
+
+  #form {
+    width: 95%;
+    padding: 1rem;
+  }
+}
+
+/* Subtle Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-blue);
+  border-radius: 4px;
+}

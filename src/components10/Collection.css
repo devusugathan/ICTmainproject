@@ -1,0 +1,155 @@
+/* Background Video */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Main Container */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9; /* Light green background */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 95%;
+    margin: 10px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.5); /* Slight transparency for readability */
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  th {
+    background-color: #2e7d32; /* Dark Green */
+    color: white;
+    padding: 12px;
+    text-align: middle;
+    font-size: 16px;
+  }
+  
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #a5d6a7; /* Light Green Border */
+    font-size: 14px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #e8f5e9; /* Very Light Green */
+  }
+  
+  tr:hover {
+    background-color: #c8e6c9; /* Hover Effect */
+  }
+  /* Ensure the page takes full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main container to push footer down */
+#root, .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Push content to take remaining space */
+.container {
+    flex: 1;
+}
+
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px 0; 
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+
+  button {
+    background-color: #4caf50; /* Medium Green */
+    color: white;
+    border: none;
+    padding: 4px 8px; /* Smaller padding */
+    width: auto; /* Adjust width to content */
+    min-width: 10px; /* Prevents overly small buttons */
+    font-size: 12px; /* Reduce text size */
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #388e3c; /* Darker Green on Hover */
+  }
+  
+  button:disabled {
+    background-color: #a5d6a7; /* Faded Green */
+    cursor: not-allowed;
+  }
+  
+  /* Form Container */
+  .form-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 30%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .form-container h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+  }
+  
+  .form-container select {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #81c784;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  .form-container div {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-container button {
+    width: 48%;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    table {
+      width: 100%;
+    }
+  
+    .form-container {
+      width: 80%;
+    }
+  }
+  
